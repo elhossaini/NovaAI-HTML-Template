@@ -32,13 +32,18 @@
   --shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.45);
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -78,6 +83,7 @@ a {
   transition: all 0.2s ease;
   border: 1px solid transparent;
   font-family: inherit;
+  max-width: 100%;
 }
 
 .btn-primary {
@@ -132,12 +138,14 @@ a {
   align-items: center;
   justify-content: space-between;
   height: 74px;
+  gap: 0.75rem;
 }
 
 .logo {
   font-size: 1.45rem;
   font-weight: 800;
   letter-spacing: -0.02em;
+  flex-shrink: 0;
 }
 
 .logo span {
@@ -159,6 +167,7 @@ a {
   display: flex;
   align-items: center;
   gap: 0.65rem;
+  flex-shrink: 0;
 }
 
 .menu-toggle {
@@ -196,16 +205,18 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-size: clamp(1.85rem, 4.2vw, 3.2rem);
   line-height: 1.18;
   margin-bottom: 1.25rem;
   font-weight: 800;
+  overflow-wrap: break-word;
 }
 
 .hero p {
   color: var(--text-muted);
   font-size: 1.1rem;
   margin-bottom: 1.85rem;
+  overflow-wrap: break-word;
 }
 
 .hero-buttons {
@@ -226,6 +237,7 @@ a {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
+  max-width: 100%;
 }
 
 .mockup-header {
@@ -309,7 +321,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 1.5rem 2.5rem;
   font-weight: 700;
   font-size: 1.1rem;
   color: var(--text-muted);
@@ -332,7 +344,7 @@ a {
 }
 
 .section-header h2 {
-  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
   margin-bottom: 0.65rem;
   font-weight: 800;
 }
@@ -358,6 +370,7 @@ a {
   border-radius: var(--radius);
   padding: 2rem;
   transition: transform 0.2s ease, border-color 0.2s ease;
+  min-width: 0;
 }
 
 .card:hover,
@@ -548,11 +561,16 @@ a {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
+  .hero {
+    padding: 3.2rem 0 2.8rem;
+  }
+
   .hero-grid,
   .features-grid,
   .steps-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .nav-links {
@@ -562,6 +580,7 @@ a {
     inset-inline: 0;
     background: var(--surface);
     flex-direction: column;
+    gap: 1rem;
     padding: 1.5rem;
     border-bottom: 1px solid var(--border);
   }
@@ -572,5 +591,10 @@ a {
 
   .menu-toggle {
     display: inline-block;
+  }
+
+  .nav-actions .btn-primary {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.85rem;
   }
 }
