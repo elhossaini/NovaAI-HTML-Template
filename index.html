@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="نوفا AI - قالب صفحة هبوط احترافي لشركات البرمجيات وأدوات الذكاء الاصطناعي" />
-  <title>نوفا AI — قالب أتمتة سير العمل الذكي</title>
+  <meta name="description" content="NovaAI — Modern SaaS & AI Landing Page HTML Template with Instant EN/AR (LTR/RTL) & Dark Mode Switching" />
+  <title>NovaAI — Smart Workflow Automation Template</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter (EN) & Cairo (AR) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -22,16 +22,16 @@
       <a href="#" class="logo">Nova<span>AI</span></a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#features">المزايا</a>
-        <a href="#how-it-works">كيف يعمل</a>
-        <a href="#pricing">الأسعار</a>
-        <a href="#faq">الأسئلة الشائعة</a>
+        <a href="#features" data-i18n="nav_features">Features</a>
+        <a href="#how-it-works" data-i18n="nav_how">How It Works</a>
+        <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#" class="btn btn-ghost" title="التبديل للنسخة الإنجليزية">EN</a>
+        <button class="btn btn-ghost" id="langToggle" aria-label="Switch Language">العربية</button>
         <button class="btn btn-ghost" id="themeToggle" aria-label="Toggle Dark Mode">🌓</button>
-        <a href="#pricing" class="btn btn-primary">ابدأ الآن</a>
+        <a href="#pricing" class="btn btn-primary" data-i18n="cta_top">Get Started</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
       </div>
     </div>
@@ -42,14 +42,14 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="badge">✨ جديد: محرك الأتمتة بالذكاء الاصطناعي 2.0</span>
-          <h1>أتمت مهام فريقك اليومية في دقائق بدلاً من ساعات.</h1>
-          <p>اربط أدواتك المفضلة، وتخلص من العمل اليدوي المتكرر، وأنجز مشاريعك بسرعة أكبر عبر مساحة عمل ذكية مصممة للفرق الحديثة.</p>
+          <span class="badge" data-i18n="badge">✨ New: AI Workflow Engine 2.0</span>
+          <h1 data-i18n="hero_h1">Automate your daily team tasks in minutes, not hours.</h1>
+          <p data-i18n="hero_p">Connect your favorite tools, eliminate repetitive manual work, and ship projects faster with an intuitive workspace built for modern teams.</p>
           <div class="hero-buttons">
-            <a href="#pricing" class="btn btn-primary">ابدأ تجربتك المجانية</a>
-            <a href="#how-it-works" class="btn btn-outline">شاهد كيف يعمل</a>
+            <a href="#pricing" class="btn btn-primary" data-i18n="hero_cta1">Start Free Trial</a>
+            <a href="#how-it-works" class="btn btn-outline" data-i18n="hero_cta2">See How It Works</a>
           </div>
-          <p class="hero-note">لا حاجة لبطاقة ائتمان · تجربة مجانية لمدة 14 يوماً</p>
+          <p class="hero-note" data-i18n="hero_note">No credit card required · 14-day free trial</p>
         </div>
 
         <div class="hero-visual">
@@ -59,15 +59,15 @@
             </div>
             <div class="mockup-body">
               <div class="stat-box">
-                <small>الوقت الذي تم توفيره هذا الأسبوع</small>
-                <strong>+18.5 ساعة</strong>
+                <small data-i18n="stat_label">Time Saved This Week</small>
+                <strong data-i18n="stat_val">+18.5 Hours</strong>
               </div>
               <div class="progress-item">
-                <span>مسار تهيئة العملاء الجدد</span>
+                <span data-i18n="prog1_label">Client Onboarding Flow</span>
                 <div class="bar"><div class="fill" style="width: 85%;"></div></div>
               </div>
               <div class="progress-item">
-                <span>التقارير الأسبوعية التلقائية</span>
+                <span data-i18n="prog2_label">Automated Weekly Reports</span>
                 <div class="bar"><div class="fill" style="width: 92%;"></div></div>
               </div>
             </div>
@@ -79,7 +79,7 @@
     <!-- ================= SOCIAL PROOF ================= -->
     <section class="logos-bar">
       <div class="container">
-        <p>موثوق من الشركات الناشئة وفرق المنتجات سريعة النمو</p>
+        <p data-i18n="logos_p">Trusted by fast-moving startups and product teams</p>
         <div class="logos-row">
           <span>ACME CORP</span>
           <span>VELOX LABS</span>
@@ -94,40 +94,45 @@
     <section id="features" class="section">
       <div class="container">
         <div class="section-header">
-          <h2>كل ما تحتاجه للتوسع بسلاسة</h2>
-          <p>مصمم لإبقاء سير عملك سريعاً، منظماً، وخالياً من التشتيت.</p>
+          <h2 data-i18n="feat_h2">Everything you need to scale smoothly</h2>
+          <p data-i18n="feat_p">Designed to keep your workflow fast, organized, and distraction-free.</p>
         </div>
 
         <div class="features-grid">
           <article class="card">
             <div class="icon">⚡</div>
-            <h3>إعداد فوري</h3>
-            <p>أطلق أول مسار عمل مؤتمت في أقل من 3 دقائق باستخدام قوالب جاهزة للاستخدام.</p>
+            <h3 data-i18n="f1_t">Instant Setup</h3>
+            <p data-i18n="f1_d">Launch your first automated workflow in under 3 minutes with ready-to-use templates.</p>
           </article>
+
           <article class="card">
             <div class="icon">🔒</div>
-            <h3>أمان بمستوى المؤسسات</h3>
-            <p>تشفير كامل وصلاحيات مخصصة لكل عضو لحماية بيانات شركتك على مدار الساعة.</p>
+            <h3 data-i18n="f2_t">Enterprise Security</h3>
+            <p data-i18n="f2_d">End-to-end encryption and role-based permissions keep your company data protected.</p>
           </article>
+
           <article class="card">
             <div class="icon">📊</div>
-            <h3>تحليلات لحظية</h3>
-            <p>تابع سرعة إنجاز الفريق والساعات التي تم توفيرها من لوحة تحكم واحدة واضحة.</p>
+            <h3 data-i18n="f3_t">Real-Time Analytics</h3>
+            <p data-i18n="f3_d">Track bottlenecks, team velocity, and saved hours from one clean dashboard.</p>
           </article>
+
           <article class="card">
             <div class="icon">🔌</div>
-            <h3>أكثر من 100 تكامل</h3>
-            <p>اربط Slack وNotion وGoogle Workspace وGitHub وStripe دون كتابة سطر كود واحد.</p>
+            <h3 data-i18n="f4_t">100+ Integrations</h3>
+            <p data-i18n="f4_d">Connect Slack, Notion, Google Workspace, GitHub, and Stripe with zero code.</p>
           </article>
+
           <article class="card">
             <div class="icon">🤖</div>
-            <h3>مشغّلات ذكاء اصطناعي</h3>
-            <p>توجيه المهام تلقائياً، تلخيص التحديثات، وتصنيف الطلبات الواردة بدقة عالية.</p>
+            <h3 data-i18n="f5_t">Smart AI Triggers</h3>
+            <p data-i18n="f5_d">Automatically route tasks, summarize updates, and classify incoming requests.</p>
           </article>
+
           <article class="card">
             <div class="icon">🌍</div>
-            <h3>تعاون سلس للفريق</h3>
-            <p>مبني للفرق الموزعة مع تنبيهات فورية ومساحات عمل مشتركة ومنظمة.</p>
+            <h3 data-i18n="f6_t">Global Collaboration</h3>
+            <p data-i18n="f6_d">Built for distributed teams with real-time notifications and shared workspaces.</p>
           </article>
         </div>
       </div>
@@ -137,25 +142,25 @@
     <section id="how-it-works" class="section bg-alt">
       <div class="container">
         <div class="section-header">
-          <h2>ابدأ العمل في 3 خطوات بسيطة</h2>
-          <p>بدون تعقيدات تقنية أو إعدادات برمجية طويلة.</p>
+          <h2 data-i18n="how_h2">Up and running in 3 simple steps</h2>
+          <p data-i18n="how_p">No complex onboarding or developer setup required.</p>
         </div>
 
         <div class="steps-grid">
           <div class="step-card">
-            <span class="step-num">الخطوة 01</span>
-            <h3>أنشئ مساحة عملك</h3>
-            <p>سجّل حسابك في ثوانٍ وادعُ أعضاء فريقك للانضمام عبر رابط مشاركة واحد.</p>
+            <span class="step-num" data-i18n="s1_num">STEP 01</span>
+            <h3 data-i18n="s1_t">Create Your Workspace</h3>
+            <p data-i18n="s1_d">Sign up in seconds and invite your team members with a single shared link.</p>
           </div>
           <div class="step-card">
-            <span class="step-num">الخطوة 02</span>
-            <h3>اربط أدواتك الحالية</h3>
-            <p>وصّل تطبيقاتك اليومية واختر قالب الأتمتة المناسب لطبيعة عمل فريقك.</p>
+            <span class="step-num" data-i18n="s2_num">STEP 02</span>
+            <h3 data-i18n="s2_t">Connect Your Tools</h3>
+            <p data-i18n="s2_d">Authorize your existing apps and pick a workflow template tailored to your team.</p>
           </div>
           <div class="step-card">
-            <span class="step-num">الخطوة 03</span>
-            <h3>أطلق وتوسّع</h3>
-            <p>فعّل قواعد الأتمتة وشاهد المهام المتكررة تُنجز تلقائياً دون تدخل يدوي.</p>
+            <span class="step-num" data-i18n="s3_num">STEP 03</span>
+            <h3 data-i18n="s3_t">Launch & Scale</h3>
+            <p data-i18n="s3_d">Activate your automation rules and watch repetitive tasks run on autopilot.</p>
           </div>
         </div>
       </div>
@@ -165,40 +170,47 @@
     <section id="pricing" class="section">
       <div class="container">
         <div class="section-header">
-          <h2>باقات أسعار واضحة ومرنة</h2>
-          <p>ابدأ مجاناً وقم بالترقية فقط عندما ينمو فريقك.</p>
+          <h2 data-i18n="price_h2">Simple, transparent pricing</h2>
+          <p data-i18n="price_p">Start free and upgrade only when your team grows.</p>
         </div>
 
         <div class="pricing-grid">
           <div class="price-card">
-            <h3>البداية</h3>
-            <div class="price">$0<span>/شهرياً</span></div>
-            <p class="price-desc">للأفراد وتجربة الأفكار الأولية.</p>
+            <h3 data-i18n="p1_name">Starter</h3>
+            <div class="price">$0<span class="mo-unit" data-i18n="mo_unit">/mo</span></div>
+            <p class="price-desc" data-i18n="p1_desc">For individuals testing ideas.</p>
             <ul>
-              <li>✓ حتى 3 مسارات عمل نشطة</li><li>✓ لوحة تحليلات أساسية</li><li>✓ دعم المجتمع</li>
+              <li data-i18n="p1_i1">✓ Up to 3 active workflows</li>
+              <li data-i18n="p1_i2">✓ Basic analytics dashboard</li>
+              <li data-i18n="p1_i3">✓ Community support</li>
             </ul>
-            <a href="#" class="btn btn-outline full">ابدأ مجاناً</a>
+            <a href="#" class="btn btn-outline full" data-i18n="p1_btn">Get Started</a>
           </div>
 
           <div class="price-card featured">
-            <span class="popular-tag">الأكثر طلباً</span>
-            <h3>الاحترافية</h3>
-            <div class="price">$29<span>/شهرياً</span></div>
-            <p class="price-desc">للشركات الناشئة والفرق المتنامية.</p>
+            <span class="popular-tag" data-i18n="popular_tag">Most Popular</span>
+            <h3 data-i18n="p2_name">Pro</h3>
+            <div class="price">$29<span class="mo-unit" data-i18n="mo_unit">/mo</span></div>
+            <p class="price-desc" data-i18n="p2_desc">For growing teams and startups.</p>
             <ul>
-              <li>✓ مسارات عمل غير محدودة</li><li>✓ مشغّلات ذكاء اصطناعي متقدمة</li><li>✓ دعم فني سريع عبر البريد والمحادثة</li><li>✓ إدارة صلاحيات وأدوار الفريق</li>
+              <li data-i18n="p2_i1">✓ Unlimited active workflows</li>
+              <li data-i18n="p2_i2">✓ Advanced AI triggers & actions</li>
+              <li data-i18n="p2_i3">✓ Priority email & chat support</li>
+              <li data-i18n="p2_i4">✓ Team roles & permissions</li>
             </ul>
-            <a href="#" class="btn btn-primary full">ابدأ تجربة 14 يوماً مجاناً</a>
+            <a href="#" class="btn btn-primary full" data-i18n="p2_btn">Start 14-Day Free Trial</a>
           </div>
 
           <div class="price-card">
-            <h3>الأعمال</h3>
-            <div class="price">$79<span>/شهرياً</span></div>
-            <p class="price-desc">للمؤسسات التي تحتاج تحكماً كاملاً.</p>
+            <h3 data-i18n="p3_name">Business</h3>
+            <div class="price">$79<span class="mo-unit" data-i18n="mo_unit">/mo</span></div>
+            <p class="price-desc" data-i18n="p3_desc">For organizations needing full control.</p>
             <ul>
-              <li>✓ تسجيل دخول موحد SSO وسجلات تدقيق</li><li>✓ مدير حساب مخصص</li><li>✓ ضمان استقرار الخدمة بنسبة 99.9%</li>
+              <li data-i18n="p3_i1">✓ Custom SSO & audit logs</li>
+              <li data-i18n="p3_i2">✓ Dedicated account manager</li>
+              <li data-i18n="p3_i3">✓ 99.9% uptime SLA guarantee</li>
             </ul>
-            <a href="#" class="btn btn-outline full">تواصل مع المبيعات</a>
+            <a href="#" class="btn btn-outline full" data-i18n="p3_btn">Contact Sales</a>
           </div>
         </div>
       </div>
@@ -208,25 +220,27 @@
     <section id="faq" class="section bg-alt">
       <div class="container faq-container">
         <div class="section-header">
-          <h2>الأسئلة الشائعة</h2>
+          <h2 data-i18n="faq_h2">Frequently Asked Questions</h2>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question">هل يمكنني إلغاء اشتراكي أو تغيير الباقة في أي وقت؟ <span>+</span></button>
+          <button class="faq-question"><span data-i18n="q1">Can I cancel or change my plan anytime?</span> <span>+</span></button>
           <div class="faq-answer">
-            <p>نعم، يمكنك الترقية أو تخفيض الباقة أو إلغاء الاشتراك في أي وقت من إعدادات الفوترة دون أي رسوم خفية.</p>
+            <p data-i18n="a1">Yes, you can upgrade, downgrade, or cancel your subscription at any time from your workspace billing settings with no hidden fees.</p>
           </div>
         </div>
+
         <div class="faq-item">
-          <button class="faq-question">هل أحتاج إلى خبرة برمجية لبناء مسارات العمل؟ <span>+</span></button>
+          <button class="faq-question"><span data-i18n="q2">Do I need coding skills to build workflows?</span> <span>+</span></button>
           <div class="faq-answer">
-            <p>إطلاقاً. الواجهة المرئية والقوالب الجاهزة تتيح لأي عضو في فريقك إطلاق الأتمتة خلال دقائق معدودة.</p>
+            <p data-i18n="a2">Not at all. Our visual builder and ready-made templates allow anyone on your team to launch automations in minutes.</p>
           </div>
         </div>
+
         <div class="faq-item">
-          <button class="faq-question">هل بيانات شركتي مشفرة وآمنة؟ <span>+</span></button>
+          <button class="faq-question"><span data-i18n="q3">Is my company data encrypted and secure?</span> <span>+</span></button>
           <div class="faq-answer">
-            <p>نعم، جميع البيانات مشفرة أثناء النقل والتخزين بأحدث معايير الأمان العالمية مع تحكم كامل في الصلاحيات.</p>
+            <p data-i18n="a3">Yes. All data is encrypted in transit (TLS 1.3) and at rest (AES-256), with strict access controls.</p>
           </div>
         </div>
       </div>
@@ -236,9 +250,9 @@
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>جاهز لتوفير ساعات من العمل كل أسبوع؟</h2>
-          <p>انضم إلى آلاف الفرق التي تدير عملياتها اليومية بذكاء مع نوفا AI.</p>
-          <a href="#pricing" class="btn btn-white">ابدأ الآن مجاناً</a>
+          <h2 data-i18n="cta_h2">Ready to save hours every single week?</h2>
+          <p data-i18n="cta_p">Join thousands of teams automating their daily operations with NovaAI.</p>
+          <a href="#pricing" class="btn btn-white" data-i18n="cta_btn">Get Started For Free</a>
         </div>
       </div>
     </section>
@@ -247,11 +261,11 @@
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container footer-wrapper">
-      <p>© 2026 نوفا AI. جميع الحقوق محفوظة.</p>
+      <p data-i18n="copy_txt">© 2026 NovaAI. All rights reserved.</p>
       <div class="footer-links">
-        <a href="#">سياسة الخصوصية</a>
-        <a href="#">شروط الاستخدام</a>
-        <a href="#">تواصل معنا</a>
+        <a href="#" data-i18n="f_privacy">Privacy Policy</a>
+        <a href="#" data-i18n="f_terms">Terms of Service</a>
+        <a href="#" data-i18n="f_contact">Contact</a>
       </div>
     </div>
   </footer>
